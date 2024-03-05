@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Post</title>
+    <style>
+        body {
+            background-color: green; /* Set background color to green */
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            margin-bottom: 10px;
+        }
+        .comment-section {
+            border: 2px solid green; /* Green outline */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .comment-image,
+        .comment-textarea,
+        .comment-button {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+            border: 2px solid green; /* Green outline */
+            border-radius: 5px;
+        }
+        .comment-button {
+            background-color: green;
+            color: white;
+            cursor: pointer;
+        }
+        .comment-button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+
+<form action="/create-post" method="POST" enctype="multipart/form-data" class="card">
+    <h2>Create Post</h2>
+    <input type="file" name="image" class="comment-image" required>
+    <textarea name="description" class="comment-textarea" placeholder="Enter description" required></textarea>
+    <button type="submit" class="comment-button">Upload</button>
+</form>
+
+</body>
+</html>
+

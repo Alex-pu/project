@@ -1,0 +1,65 @@
+<!-- payment.ejs -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Form</title>
+    <style>
+        body {
+            background-color: green; /* Set background color to green */
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 600px;
+        }
+        .card img {
+            width: 100%;
+            border-radius: 5px;
+            margin-bottom: 10px;
+        }
+        .card p {
+            margin-bottom: 10px;
+        }
+        .comment-section {
+            border: 2px solid green; /* Green outline */
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .comment-image,
+        .comment-textarea,
+        .comment-button {
+            display: block;
+            margin-bottom: 10px;
+            width: 100%;
+            padding: 10px;
+            border: 2px solid green; /* Green outline */
+            border-radius: 5px;
+        }
+        .comment-button {
+            background-color: green;
+            color: white;
+            cursor: pointer;
+        }
+        .comment-button:hover {
+            background-color: darkgreen;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>Payment Form</h1>
+        <form action="/" method="post" class="comment-section">
+            <input type="text" id="orderID" name="orderID" class="comment-image" placeholder="Order ID" required>
+            <input type="number" id="amount" name="amount" class="comment-textarea" placeholder="Amount" min="0" required>
+            <input id="phone" name="phone" class="comment-textarea" placeholder="Phone"  required>
+            <button type="submit" class="comment-button">Pay Now</button>
+        </form>
+    </div>
+</body>
+</html>
